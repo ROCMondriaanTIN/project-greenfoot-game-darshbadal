@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tileset version="1.2" tiledversion="1.2.0" name="download" tilewidth="32" tileheight="32" tilecount="49" columns="7">
+ <image source="../../../Downloads/download.jpg" width="225" height="225"/>
+</tileset>
