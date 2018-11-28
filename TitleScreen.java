@@ -18,10 +18,10 @@ public class TitleScreen extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1280, 720, 1); 
         Greenfoot.start();
-        this.setBackground("chaseee.jpg");
+        this.setBackground("chasee.jpg");
     }
     public void act()
     {
-        if (Greenfoot.isKeyDown("enter")) Greenfoot.setWorld(new MyWorld());
+        if (Greenfoot.isKeyDown("space")) Greenfoot.setWorld(new MyWorld());
     }
 }
