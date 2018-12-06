@@ -72,10 +72,14 @@ public class DemoTileFactory extends TileFactory {
             case 14:
                 tile = new Tile("signRight.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
                 break;
+                case 106:
+                tile = new Tile("hud_2.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+                tile.isSolid = true;
             default:
                 tile = new Tile("grassMid.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT, TileType.GROUND);
                 tile.isSolid = true;
                 break;
+                
         }
         return tile;
     }

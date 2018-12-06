@@ -1,6 +1,5 @@
-
 import greenfoot.*;
-
+import java.util.List;
 /**
  *
  * @author R. Springer
@@ -39,9 +38,11 @@ public class Hero extends Mover {
     private int frame = 1;
     private int speed = 3;
     private boolean onGround;
+    private CollisionEngine collisionEngine;
+    private TileEngine tileEngine;
     
 
-    public Hero() {
+     public Hero(CollisionEngine collisionEngine, TileEngine tileEngine) {
         super();
         gravity = 9.8;
         acc = 0.6;
@@ -97,8 +98,6 @@ public class Hero extends Mover {
             }
         }
     }
-
-    
 
     public int getWidth() {
         return getImage().getWidth();
