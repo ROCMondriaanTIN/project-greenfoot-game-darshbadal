@@ -1,4 +1,3 @@
-
 /**
  *
  * @author R. Springer
@@ -57,6 +56,7 @@ public class TileFactory {
                 break;
             case 11:
                 tile = new Tile("liquidWaterTop_mid.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+                tile.isSolid = false;
                 break;
             case 14:
                 tile = new Tile("signExit.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
@@ -83,7 +83,7 @@ public class TileFactory {
                 case 62:
                 tile = new Tile("door_openMid.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
                 break;
-                case 147:
+                case 63:
                 tile = new Tile("door_openTop.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
                 break;
                 case 253:
@@ -99,7 +99,7 @@ public class TileFactory {
                 tile.isSolid = false;
                 break;
                 case 149:
-                tile = new Tile("liquidWater.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+                tile = new WaterTile("liquidWater.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
                 tile.isSolid = false;
                 break;
                 case 82:
@@ -111,7 +111,7 @@ public class TileFactory {
                 tile.isSolid = false;
                 break;                           
                 case 146:
-                tile = new Tile("liquidWater.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+                tile = new WaterTile("liquidWater.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
                 tile.isSolid = false;
                 break;
                 case 84:
@@ -160,6 +160,9 @@ public class TileFactory {
                 tile = new Tile("hud_coins.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
                 tile.isSolid = false;
                 break;
+                
+                case 234:
+                tile  = new Tile("coinBronze.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT, TileType.COINB);
         }
         return tile;
     }

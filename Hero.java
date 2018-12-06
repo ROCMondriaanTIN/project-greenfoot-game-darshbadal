@@ -10,7 +10,9 @@ public class Hero extends Mover {
     private final double gravity;
     private final double acc;
     private final double drag;
-      private GreenfootImage run1 = new GreenfootImage("p1_walk01 L.png");
+    int x = 84;
+    int y = 973;
+    private GreenfootImage run1 = new GreenfootImage("p1_walk01 L.png");
     private GreenfootImage run2 = new GreenfootImage("p1_walk02 L.png");
     private GreenfootImage run3 = new GreenfootImage("p1_walk03 L.png");
     private GreenfootImage run4 = new GreenfootImage("p1_walk04 L.png");
@@ -50,7 +52,7 @@ public class Hero extends Mover {
     @Override
     public void act() {
         handleInput();
-        
+        water();
         velocityX *= drag;
         velocityY += acc;
         if (velocityY > gravity) {
@@ -88,6 +90,13 @@ public class Hero extends Mover {
         
     }
     
+     public void water(){
+        for (Actor hero : getIntersectingObjects(WaterTile.class)){
+            if(hero != null) {
+                setLocation(x,y);
+            }
+        }
+    }
 
     
 
