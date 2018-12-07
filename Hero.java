@@ -64,7 +64,15 @@ public class Hero extends Mover {
 
         for (Actor enemy : getIntersectingObjects(Enemy.class)) {
             if (enemy != null) {
-                getWorld().removeObject(this);
+                //getWorld().removeObject(this);
+                setLocation(x,y);
+                break;
+            }
+        }
+        for (Actor enemy : getIntersectingObjects(Enemy2.class)) {
+            if (enemy != null) {
+                //getWorld().removeObject(this);
+                setLocation(x,y);
                 break;
             }
         }
