@@ -54,6 +54,7 @@ public class Hero extends Mover {
     public void act() {
         handleInput();
         water();
+        Lava();
         velocityX *= drag;
         velocityY += acc;
         if (velocityY > gravity) {
@@ -61,18 +62,26 @@ public class Hero extends Mover {
         }
         applyVelocity();
         handleInput();
-
+        
+      
         for (Actor enemy : getIntersectingObjects(Enemy.class)) {
             if (enemy != null) {
                 //getWorld().removeObject(this);
-                setLocation(150, 733);
+                setLocation(150, 1275);
                 break;
             }
         }
         for (Actor enemy : getIntersectingObjects(Enemy2.class)) {
             if (enemy != null) {
                 //getWorld().removeObject(this);
-                setLocation(150, 733);
+                setLocation(150, 1275);
+                break;
+            }
+        }
+         for (Actor enemy : getIntersectingObjects(Enemy3.class)) {
+            if (enemy != null) {
+                //getWorld().removeObject(this);
+                setLocation(150, 1275);
                 break;
             }
         }
@@ -84,7 +93,7 @@ public class Hero extends Mover {
         
     public void handleInput() { 
         if (Greenfoot.isKeyDown("space") && (onGround() == true)) {
-            velocityY = -15;
+            velocityY = -25;
             setImage("p1_jump.png");
         }
 
@@ -102,11 +111,17 @@ public class Hero extends Mover {
      public void water(){
         for (Actor hero : getIntersectingObjects(WaterTile.class)){
             if(hero != null) {
-                setLocation(150, 733);
+                setLocation(150, 1275);
             }
         }
     }
-
+    public void Lava(){
+        for (Actor hero : getIntersectingObjects(liquidLavaTop.class)){
+            if(hero != null) {
+                setLocation(150, 1275);
+            }
+        }
+    }
     public int getWidth() {
         return getImage().getWidth();
     }
