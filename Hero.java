@@ -65,14 +65,14 @@ public class Hero extends Mover {
         for (Actor enemy : getIntersectingObjects(Enemy.class)) {
             if (enemy != null) {
                 //getWorld().removeObject(this);
-                setLocation(x,y);
+                setLocation(150, 733);
                 break;
             }
         }
         for (Actor enemy : getIntersectingObjects(Enemy2.class)) {
             if (enemy != null) {
                 //getWorld().removeObject(this);
-                setLocation(x,y);
+                setLocation(150, 733);
                 break;
             }
         }
@@ -102,7 +102,7 @@ public class Hero extends Mover {
      public void water(){
         for (Actor hero : getIntersectingObjects(WaterTile.class)){
             if(hero != null) {
-                setLocation(x,y);
+                setLocation(150, 733);
             }
         }
     }
